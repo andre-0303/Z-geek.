@@ -6,6 +6,7 @@ import JogosPage from "./components/JogosPage";
 import SobrePage from "./components/SobrePage";
 import ContatosPage from "./components/ContatosPage";
 import CadastroPage from "./pages/(auth)/signup/SignUp";
+import Footer from "./components/Footer";
 import { supabase } from "./lib/supabaseClient";
 import React, { useState, useEffect, createContext, useContext } from "react";
 import {
@@ -35,11 +36,11 @@ function App() {
       const {
         data: { session },
       } = await supabase.auth.getSession();
-      console.log("Supabase session carregada:", session); // debug opcional
+      console.log("Supabase session carregada:", session);
       if (session) {
         setIsLoggedIn(true);
       }
-      setIsLoadingAuth(false); // auth verificada, libera app
+      setIsLoadingAuth(false);
     }
     checkSession();
 
@@ -59,7 +60,7 @@ function App() {
   }, []);
 
   if (isLoadingAuth) {
-    return <div>Carregando autenticação...</div>; // ou spinner bonitão
+    return <div>Carregando autenticação...</div>;
   }
 
   return (
@@ -104,6 +105,7 @@ function App() {
           />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer />
       </Router>
     </AuthContext.Provider>
   );
