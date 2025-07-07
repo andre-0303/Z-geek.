@@ -18,11 +18,23 @@ const Header = () => {
 
       <button
         onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden flex flex-col justify-center items-center gap-1"
+        className="md:hidden relative w-8 h-8 flex items-center justify-center focus:outline-none"
       >
-        <span className="w-8 h-1 bg-gamer-primary rounded"></span>
-        <span className="w-8 h-1 bg-gamer-primary rounded"></span>
-        <span className="w-8 h-1 bg-gamer-primary rounded"></span>
+        <span
+          className={`absolute w-8 h-1 bg-gamer-primary rounded transition-all duration-300 ${
+            isMenuOpen ? "rotate-45 translate-y-0" : "-translate-y-2"
+          }`}
+        ></span>
+        <span
+          className={`absolute w-8 h-1 bg-gamer-primary rounded transition-all duration-300 ${
+            isMenuOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></span>
+        <span
+          className={`absolute w-8 h-1 bg-gamer-primary rounded transition-all duration-300 ${
+            isMenuOpen ? "-rotate-45 translate-y-0" : "translate-y-2"
+          }`}
+        ></span>
       </button>
 
       <nav className="hidden md:flex mt-2">
