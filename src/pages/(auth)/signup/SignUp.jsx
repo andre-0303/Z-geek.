@@ -15,6 +15,23 @@ const CadastroPage = () => {
 
   async function handleSignUp(e) {
     e.preventDefault();
+
+    if (!email || !password) {
+      alert("Preencha email e senha!");
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Digite um email válido!");
+      return;
+    }
+
+    if (password.length < 6) {
+      alert("A senha deve ter pelo menos 6 caracteres!");
+      return;
+    }
+
     setLoading(true);
 
     const { error } = await supabase.auth.signUp({
@@ -25,6 +42,7 @@ const CadastroPage = () => {
     setLoading(false);
 
     if (error) {
+      console.error("Erro completo do Supabase:", error);
       alert(`Erro ao cadastrar: ${error.message}`);
       return;
     }
