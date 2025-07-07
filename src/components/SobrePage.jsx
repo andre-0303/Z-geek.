@@ -1,10 +1,10 @@
 const SobrePage = () => (
-  <div className="min-h-[80vh] flex flex-col justify-center items-center text-gamer-textSecondary bg-gamer-textSecondary px-6 py-12">
+  <div className="min-h-[80vh] flex flex-col justify-center items-center text-gamer-textPrimary bg-gamer-gray px-6 py-12">
     <h1 className="text-4xl font-extrabold text-gamer-primary mb-8 text-center drop-shadow">
       Sobre Nós
     </h1>
 
-    <div className="max-w-3xl text-center text-lg leading-relaxed bg-gamer-gray p-6 rounded-xl shadow-lg">
+    <div className="max-w-3xl text-center text-lg leading-relaxed bg-gamer-dark p-6 rounded-xl shadow-lg">
       <p className="mb-6">
         <span className="font-bold text-gamer-primary">Z-Geek</span> nasceu da
         paixão por games, tecnologia e cultura geek. Nosso objetivo é conectar
