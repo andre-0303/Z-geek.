@@ -28,14 +28,14 @@ const GameCard = ({ game }) => {
           onClick={() => setShowModal(false)}
         >
           <div
-            className="bg-white rounded-lg p-6 w-11/12 max-w-md"
+            className="bg-gamer-textSecondary rounded-lg p-6 w-11/12 max-w-md"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-xl font-bold mb-4">{game.title}</h2>
             <p className="text-gray-700 mb-4">{game.description}</p>
             <button
               onClick={() => setShowModal(false)}
-              className="bg-red-600 hover:bg-red-700 text-white py-2 px-4 rounded"
+              className="bg-gamer-primary hover:bg-gamer-neonLilac text-white py-2 px-4 rounded"
             >
               Fechar
             </button>
