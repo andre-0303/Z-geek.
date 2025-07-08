@@ -16,6 +16,7 @@ Z-Geek é um site que indica jogos para os gamers mais exigentes. Descubra e exp
 - **🕹️ Tela de Jogos**
   - Exibição dos jogos com **poster** e **nome**.
   - Modal interativo que exibe **descrição detalhada** dos jogos.
+  - Fetch para uma API que contém os jogos.
 
 - **📞 Tela de Contatos**
   - Formulário para que usuários entrem em contato.
