@@ -67,10 +67,4 @@ Sinta-se livre para abrir issues e pull requests! Vamos juntos melhorar o Z-Geek
 
 ---
 
-## 📜 Licença
-
-[MIT](LICENSE)
-
----
-
 > **Feito com ❤️ por [André](https://github.com/andre-0303) e apaixonados por jogos. Bora geekar! 🎮
